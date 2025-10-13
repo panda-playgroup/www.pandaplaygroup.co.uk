@@ -4,11 +4,13 @@ import PageHead from "@/components/layout/page-head/page-head";
 import Article from "@/components/common/article";
 import { usePolicyGroups } from "@/queries/new-pandas/policies/use-policy-groups";
 import { useSafeguardingPolicy } from "@/queries/new-pandas/policies/use-safeguarding-policy";
+import { useClimateActionPolicy } from "@/queries/new-pandas/policies/use-climate-action-policy";
 
 const heading = "Policies";
 
 const PoliciesPage: FC = () => {
     const safeguardingPolicy = useSafeguardingPolicy();
+    const climateActionPolicy = useClimateActionPolicy();
     const policyGroups: readonly Queries.ContentfulPolicyGroup[] = usePolicyGroups();
 
     return (
@@ -16,9 +18,18 @@ const PoliciesPage: FC = () => {
             <Article heading={heading}>
                 <p>You can download copies of all of our policy documents.</p>
                 <p>
-                    <a href={safeguardingPolicy?.publicUrl} target="_blank" rel="noreferrer">
-                        Panda Preschool Playgroup Safeguarding Statement
-                    </a>
+                    <ul>
+                        <li>
+                            <a href={safeguardingPolicy?.publicUrl} target="_blank" rel="noreferrer">
+                                Safeguarding Statement
+                            </a>
+                        </li>
+                        <li>
+                            <a href={climateActionPolicy?.publicUrl} target="_blank" rel="noreferrer">
+                                Climate Action Policy
+                            </a>
+                        </li>
+                    </ul>
                 </p>
                 {policyGroups.map((policyGroup: Queries.ContentfulPolicyGroup) => (
                     <Fragment key={policyGroup.id}>
