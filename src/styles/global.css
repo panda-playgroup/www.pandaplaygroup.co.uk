@@ -1,6 +1,17 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@source "../../node_modules/flowbite-react/**/*.js";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --color-green-light: #73d05d;
+    --color-green: #419a2d;
+    --brightness-80: 0.8;
+    --font-sofia-pro-soft-bold: "Sofia Pro Soft Bold";
+    --font-dk-crayon-crumble: DK Crayon Crumble;
+    --font-quicksand: Quicksand;
+}
 
 @layer base {
     a {

@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Link } from "gatsby";
-import { Dropdown } from "flowbite-react";
+import { Dropdown, DropdownItem } from "flowbite-react";
 import NavigationItem from "@/components/layout/header/navigation-item";
 
 interface NavigationSectionProps {
@@ -43,11 +43,11 @@ const NavigationSection: FC<NavigationSectionProps> = ({
 const MenuItemLink: FC<NavigationMenuItem> = ({ title, href, isExternal }: NavigationMenuItem) => {
     return isExternal ? (
         <a href={href} className="no-underline" target="_blank" rel="noreferrer">
-            <Dropdown.Item className="text-xl">{title}</Dropdown.Item>
+            <DropdownItem className="text-xl">{title}</DropdownItem>
         </a>
     ) : (
         <Link to={href} className="no-underline">
-            <Dropdown.Item className="text-xl">{title}</Dropdown.Item>
+            <DropdownItem className="text-xl">{title}</DropdownItem>
         </Link>
     );
 };

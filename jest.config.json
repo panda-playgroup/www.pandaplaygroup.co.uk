@@ -4,6 +4,7 @@
     "setupFilesAfterEnv": ["<rootDir>/src/__tests__/setup-jest.ts"],
     "collectCoverage": true,
     "collectCoverageFrom": ["<rootDir>/src/**"],
+    "transformIgnorePatterns": ["/node_modules/(?!(debounce)/)"],
     "moduleNameMapper": {
         "@/components/(.*)": "<rootDir>/src/components/$1",
         "@/pages/(.*)": "<rootDir>/src/pages/$1",

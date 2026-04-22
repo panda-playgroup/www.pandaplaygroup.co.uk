@@ -15,7 +15,7 @@ describe("contentful-image", () => {
 
         expect(gatsbyPluginImage.GatsbyImage).toHaveBeenCalledWith(
             expect.objectContaining({ image: images[0].gatsbyImageData }),
-            expect.anything(),
+            undefined,
         );
     });
 
@@ -24,7 +24,7 @@ describe("contentful-image", () => {
 
         expect(gatsbyPluginImage.GatsbyImage).toHaveBeenCalledWith(
             expect.objectContaining({ alt: images[0].description }),
-            expect.anything(),
+            undefined,
         );
     });
 
@@ -38,7 +38,7 @@ describe("contentful-image", () => {
 
         expect(gatsbyPluginImage.GatsbyImage).toHaveBeenCalledWith(
             expect.objectContaining({ image: images[1].gatsbyImageData }),
-            expect.anything(),
+            undefined,
         );
     });
 

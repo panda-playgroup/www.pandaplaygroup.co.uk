@@ -20,7 +20,7 @@ const Layout: FC<PropsWithChildren<LayoutProps>> = ({
     return (
         <div className="flex justify-center bg-slate-100 text-slate-800 text-xl font-quicksand">
             <div className="w-[1920px]">
-                <header>
+                <header className="relative z-20">
                     <Navigation activeSection={activeSection} />
                     {activeSection && pageHeading && <Breadcrumb activeSection={activeSection} current={pageHeading} />}
                 </header>
