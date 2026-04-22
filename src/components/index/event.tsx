@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
-import { dateIsInThePast, formatDate } from "@/services/dates";
+import { dateIsInThePast } from "@/services/dates";
 
 interface EventProps {
     name: string;
@@ -24,8 +24,7 @@ const Event: FC<EventProps> = ({ name, date, href, image }: EventProps) => {
             ) : (
                 <StaticImage src="../../images/logo.png" alt="" width={96} height={96} />
             )}
-            <div className="px-8 pt-4 md:py-0 grow">{name}</div>
-            <div className="px-8 pb-4 md:py-0 text-sm">{formatDate(date)}</div>
+            <div className="px-8 py-4 md:py-0 grow">{name}</div>
         </>
     );
 
