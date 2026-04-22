@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
-import { Navbar } from "flowbite-react";
+import { Navbar, NavbarBrand, NavbarCollapse, NavbarToggle } from "flowbite-react";
 import NavigationSection from "@/components/layout/header/navigation-section";
 import LinkButton from "@/components/common/link-button";
 import { usePandaAndParentAgreement } from "@/queries/layout/header/use-panda-and-parent-agreement";
@@ -18,20 +18,20 @@ const Navigation: FC<NavigationProps> = ({ activeSection }: NavigationProps) => 
     return (
         <Navbar
             fluid
-            className="border-b-4 border-green h-42"
+            className="border-b-4 border-green min-h-42 relative z-20"
             theme={{
                 root: {
                     inner: { base: "mx-3 flex flex-wrap items-center justify-between gap-y-5 gap-x-5 xl:pb-0 pb-4" },
                 },
             }}
         >
-            <Navbar.Brand as="div">
+            <NavbarBrand as="div">
                 <Link to="/" className="flex items-center w-full gap-x-10 no-underline">
                     <StaticImage src="../../../images/logo.png" alt="" aria-hidden width={125} height={125} />
                     <h1 className="font-sofia-pro-soft-bold text-2xl 2xl:text-3xl">Panda Preschool Playgroup</h1>
                 </Link>
-            </Navbar.Brand>
-            <Navbar.Collapse className="order-1">
+            </NavbarBrand>
+            <NavbarCollapse className="order-1">
                 <NavigationSection
                     title="Sessions"
                     menuItems={[
@@ -80,10 +80,10 @@ const Navigation: FC<NavigationProps> = ({ activeSection }: NavigationProps) => 
                     ]}
                     activeSection={activeSection}
                 />
-            </Navbar.Collapse>
+            </NavbarCollapse>
             <div className="flex md:order-2 w-full md:w-auto justify-between">
                 <LinkButton text="Apply" href="/apply" />
-                <Navbar.Toggle
+                <NavbarToggle
                     theme={{
                         base: "inline-flex items-center hover:text-green-light text-sm md:hidden",
                     }}

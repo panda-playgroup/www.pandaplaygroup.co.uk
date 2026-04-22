@@ -58,7 +58,7 @@ describe("jumbotron", () => {
 
         expect(gatsbyPluginImage.GatsbyImage).toHaveBeenCalledWith(
             expect.objectContaining({ image: image.gatsbyImageData }),
-            expect.anything(),
+            undefined,
         );
     });
 });

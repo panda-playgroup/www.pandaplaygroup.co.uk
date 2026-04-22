@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Table } from "flowbite-react";
+import { Table, TableBody, TableRow, TableCell } from "flowbite-react";
 import Layout from "@/components/layout/layout";
 import PageHead from "@/components/layout/page-head/page-head";
 import Article from "@/components/common/article";
@@ -24,20 +24,20 @@ const ApplyPage: FC = () => {
                 </p>
 
                 <Table className="mb-12">
-                    <Table.Body className="text-base sm:text-lg text-slate-800 divide-y">
-                        <Table.Row>
-                            <Table.Cell className="px-3">
+                    <TableBody className="text-base sm:text-lg text-slate-800 divide-y">
+                        <TableRow>
+                            <TableCell className="px-3">
                                 <strong>
                                     <a href={`mailto:${footerContent.emailAddress}`}>{footerContent.emailAddress}</a>
                                 </strong>
-                            </Table.Cell>
-                        </Table.Row>
-                        <Table.Row>
-                            <Table.Cell className="px-3">
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell className="px-3">
                                 <strong>{footerContent.phoneNumber}</strong>
-                            </Table.Cell>
-                        </Table.Row>
-                    </Table.Body>
+                            </TableCell>
+                        </TableRow>
+                    </TableBody>
                 </Table>
 
                 <p>We look forward to hearing from you!</p>
