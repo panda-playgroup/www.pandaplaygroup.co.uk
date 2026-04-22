@@ -4,6 +4,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import { Navbar } from "flowbite-react";
 import NavigationSection from "@/components/layout/header/navigation-section";
 import LinkButton from "@/components/common/link-button";
+import { usePandaAndParentAgreement } from "@/queries/layout/header/use-panda-and-parent-agreement";
 import { useProspectus } from "@/queries/layout/header/use-prospectus";
 
 interface NavigationProps {
@@ -11,6 +12,7 @@ interface NavigationProps {
 }
 
 const Navigation: FC<NavigationProps> = ({ activeSection }: NavigationProps) => {
+    const pandaAndParentAgreement = usePandaAndParentAgreement();
     const prospectus = useProspectus();
 
     return (
@@ -45,6 +47,11 @@ const Navigation: FC<NavigationProps> = ({ activeSection }: NavigationProps) => 
                     menuItems={[
                         { title: "Settling in", href: "/new-pandas/settling-in" },
                         { title: "Prospectus", href: prospectus?.url ?? "#", isExternal: true },
+                        {
+                            title: "Panda and Parent Agreement",
+                            href: pandaAndParentAgreement?.url ?? "#",
+                            isExternal: true,
+                        },
                         { title: "Our fees", href: "/new-pandas/fees" },
                         { title: "Policies", href: "/new-pandas/policies" },
                     ]}

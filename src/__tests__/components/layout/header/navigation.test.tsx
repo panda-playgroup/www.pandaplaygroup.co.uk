@@ -6,6 +6,7 @@ jest.mock("@/components/layout/header/navigation-section");
 const mockNavigationSection = jest.mocked(NavigationSection);
 
 jest.mock("@/queries/layout/header/use-prospectus");
+jest.mock("@/queries/layout/header/use-panda-and-parent-agreement");
 
 beforeEach(() => {
     jest.clearAllMocks();

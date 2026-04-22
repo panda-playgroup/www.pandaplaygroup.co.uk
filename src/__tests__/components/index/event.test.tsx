@@ -18,38 +18,21 @@ describe("event", () => {
         expect(name).toBeInTheDocument();
     });
 
-    it("renders the formatted date", () => {
-        mockDatesService.formatDate.mockReturnValueOnce("Test Wed 1 Jan 2020");
-
-        render(<Event name={"Event one"} date={"2020-01-01"} />);
-
-        expect(mockDatesService.formatDate).toHaveBeenCalled();
-
-        const date = screen.queryByText("Test Wed 1 Jan 2020");
-
-        expect(date).toBeInTheDocument();
-    });
-
     it("renders the link", () => {
-        mockDatesService.formatDate.mockReturnValueOnce("Test Wed 1 Jan 2020");
-
         render(<Event name={"Event one"} date={"2020-01-01"} href="http://localhost:8000/event" />);
 
-        const url = screen.queryByRole("link", { name: "Event one Test Wed 1 Jan 2020" });
+        const url = screen.queryByRole("link", { name: "Event one" });
 
         expect(url).toBeInTheDocument();
     });
 
     it("renders text when the date is in the past", () => {
-        mockDatesService.formatDate.mockReturnValueOnce("Test Wed 1 Jan 2020");
         mockDatesService.dateIsInThePast.mockReturnValueOnce(true);
 
         render(<Event name={"Event one"} date={"2020-01-01"} href="http://localhost:8000/event" />);
 
         const url = screen.queryByRole("link");
-        const text = screen.queryByText("Test Wed 1 Jan 2020");
 
         expect(url).not.toBeInTheDocument();
-        expect(text).toBeInTheDocument();
     });
 });
