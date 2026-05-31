@@ -10,22 +10,20 @@ const FooterContent: FC = () => {
             <div className="mx-auto w-full max-w-screen-xl lg:grid lg:grid-cols-3 lg:gap-8 py-8 px-4 lg:px-24 xl:px-4">
                 <div>
                     <p className="mb-4">
-                        Howell Hall
-                        <br />
-                        School Lane
+                        16 Low Green
                         <br />
                         Copmanthorpe
                         <br />
                         York
                         <br />
-                        YO23 3SQ
+                        YO23 3SB
                     </p>
                     <p className="mb-4">{footerContent.phoneNumber}</p>
                     <a href={`mailto:${footerContent.emailAddress}`}>{footerContent.emailAddress}</a>
                     <Separator />
                 </div>
                 <div className="mb-8 md:mb-0 text-base">
-                    <p className="mb-4">Ofsted registration: 2810800</p>
+                    <p className="mb-4">Ofsted registration: 2891945</p>
                     <p className="mb-4">Registered charity no: 1209013</p>
                     <p className="mb-4">Member of the Early Years Alliance</p>
                     <p className="mb-4">

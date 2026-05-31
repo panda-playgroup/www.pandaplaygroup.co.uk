@@ -1,7 +1,6 @@
 import { FC, useState } from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
 import Button from "@/components/common/button";
-import LinkButton from "@/components/common/link-button";
 import TourModal from "@/components/index/tour-modal";
 import { useJumbotronImage } from "@/queries/index/use-jumbotron-image";
 import { useVirtualTour } from "@/queries/index/use-virtual-tour";
@@ -33,7 +32,10 @@ const Jumbotron: FC = () => {
                     {tour?.isPublished && (
                         <Button onClick={() => setOpenTourModal(true)} text="Watch our virtual tour" />
                     )}
-                    <LinkButton text="Browse our galleries" href="/galleries" />
+                    {/* <LinkButton text="Browse our galleries" href="/galleries" /> */}
+                    <p className="font-black text-slate-100 italic text-xl text-shadow md:text-xl lg:text-2xl py-4 md:py-8 sm:px-16 lg:px-64">
+                        New galleries coming soon!
+                    </p>
                 </div>
             </div>
             {tour?.isPublished && <TourModal openTourModal={openTourModal} setOpenTourModal={setOpenTourModal} />}
