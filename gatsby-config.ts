@@ -6,7 +6,7 @@ const config: GatsbyConfig = {
         title: "Panda Preschool Playgroup",
         siteUrl: "https://www.pandaplaygroup.co.uk",
         description:
-            "Panda Preschool Playgroup is a registered charity that offers pre-school and stay and play sessions, situated in the village of Copmanthorpe just outside the city of York, UK",
+            "Panda Preschool Playgroup is a registered charity that offers preschool and stay and play sessions, situated in the village of Copmanthorpe just outside the city of York, UK",
     },
     graphqlTypegen: {
         typesOutputPath: "src/types/gatsby-types.d.ts",

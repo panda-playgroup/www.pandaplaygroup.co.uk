@@ -8,6 +8,6 @@ describe("app", () => {
     it("renders the homepage content", () => {
         cy.visit("/");
 
-        cy.findByRole("heading", { name: "Our pre-school for little Pandas" });
+        cy.findByRole("heading", { name: "Our preschool for little Pandas" });
     });
 });
