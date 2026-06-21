@@ -17,16 +17,16 @@ const IndexPage: FC = () => {
             <InformationCards />
             <Section
                 style="standard"
-                heading="Our pre-school for little Pandas"
-                image={<ContentfulImage imageTitle="Homepage - Pre-school" images={images} />}
+                heading="Our preschool for little Pandas"
+                image={<ContentfulImage imageTitle="Homepage - Preschool" images={images} />}
             >
                 <p>
-                    Panda Preschool Playgroup is a safe and welcoming pre-school setting for 2-4+ years. We also welcome
+                    Panda Preschool Playgroup is a safe and welcoming preschool setting for 2-4+ years. We also welcome
                     a small number of children from 18 months.
                 </p>
                 <p>
                     Our aim is to provide your child with the best support and care as they take their first steps
-                    towards starting school. Our sessions provide local pre-school children with an exciting journey of
+                    towards starting school. Our sessions provide local preschool children with an exciting journey of
                     learning through play.
                 </p>
                 <p>
@@ -35,7 +35,7 @@ const IndexPage: FC = () => {
                 </p>
                 <p className="mt-8 text-2xl">
                     <strong>
-                        <Link to="/sessions/pre-school">Find out more about our pre-school</Link>
+                        <Link to="/sessions/preschool">Find out more about our preschool</Link>
                     </strong>
                 </p>
             </Section>
@@ -45,7 +45,7 @@ const IndexPage: FC = () => {
                 image={<ContentfulImage imageTitle="Homepage - Sticky Mitts and Tiny Tots" images={images} />}
             >
                 <p>
-                    As well as our pre-school we offer our extremely popular stay and play sessions for babies and
+                    As well as our preschool we offer our extremely popular stay and play sessions for babies and
                     toddlers, <strong>Sticky Mitts and Tiny Tots</strong>! This is a friendly, fun group for children
                     and their grown-ups happening regularly during term time.
                 </p>

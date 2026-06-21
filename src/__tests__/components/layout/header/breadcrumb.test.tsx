@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 
 describe("breadcrumb", () => {
     it("renders the home link", () => {
-        render(<Breadcrumb activeSection="Sessions" current="Our pre-school" />);
+        render(<Breadcrumb activeSection="Sessions" current="Our preschool" />);
 
         const homeLink = screen.queryByRole("link", { name: "Home" });
 
@@ -11,7 +11,7 @@ describe("breadcrumb", () => {
     });
 
     it("renders the active section", () => {
-        render(<Breadcrumb activeSection="Sessions" current="Our pre-school" />);
+        render(<Breadcrumb activeSection="Sessions" current="Our preschool" />);
 
         const activeSection = screen.queryByText("Sessions");
 
@@ -19,9 +19,9 @@ describe("breadcrumb", () => {
     });
 
     it("renders the current page", () => {
-        render(<Breadcrumb activeSection="Sessions" current="Our pre-school" />);
+        render(<Breadcrumb activeSection="Sessions" current="Our preschool" />);
 
-        const currentPage = screen.queryByText("Our pre-school");
+        const currentPage = screen.queryByText("Our preschool");
 
         expect(currentPage).toBeInTheDocument();
     });

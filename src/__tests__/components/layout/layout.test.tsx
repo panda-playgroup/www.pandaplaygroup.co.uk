@@ -49,7 +49,7 @@ describe("layout", () => {
     });
 
     it("does not render the breadcrumb when there is no active section", () => {
-        render(<Layout pageHeading="Our pre-school" />);
+        render(<Layout pageHeading="Our preschool" />);
 
         expect(mockBreadcrumb).not.toHaveBeenCalled();
     });
@@ -61,7 +61,7 @@ describe("layout", () => {
     });
 
     it("renders the breadcrumb when there is an active section and page heading", () => {
-        render(<Layout activeSection="Sessions" pageHeading="Our pre-school" />);
+        render(<Layout activeSection="Sessions" pageHeading="Our preschool" />);
 
         expect(mockBreadcrumb).toHaveBeenCalled();
     });
