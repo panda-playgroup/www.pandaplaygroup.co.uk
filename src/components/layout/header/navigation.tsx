@@ -5,7 +5,6 @@ import { Navbar, NavbarBrand, NavbarCollapse, NavbarToggle } from "flowbite-reac
 import NavigationSection from "@/components/layout/header/navigation-section";
 import LinkButton from "@/components/common/link-button";
 import { usePandaAndParentAgreement } from "@/queries/layout/header/use-panda-and-parent-agreement";
-import { useProspectus } from "@/queries/layout/header/use-prospectus";
 
 interface NavigationProps {
     activeSection?: string;
@@ -13,7 +12,6 @@ interface NavigationProps {
 
 const Navigation: FC<NavigationProps> = ({ activeSection }: NavigationProps) => {
     const pandaAndParentAgreement = usePandaAndParentAgreement();
-    const prospectus = useProspectus();
 
     return (
         <Navbar
@@ -44,7 +42,6 @@ const Navigation: FC<NavigationProps> = ({ activeSection }: NavigationProps) => 
                     title="New Pandas"
                     menuItems={[
                         { title: "Settling in", href: "/new-pandas/settling-in" },
-                        { title: "Prospectus", href: prospectus?.url ?? "#", isExternal: true },
                         {
                             title: "Panda and Parent Agreement",
                             href: pandaAndParentAgreement?.url ?? "#",
