@@ -17,16 +17,6 @@ const GreenPandaPage: FC = () => {
                     <Link to="/new-pandas/policies">Climate Action Policy</Link> for details.
                 </p>
                 <h3 className="font-dk-crayon-crumble mt-12 mb-6 tracking-tight leading-none text-3xl lg:text-4xl">
-                    Sprouts
-                </h3>
-                <p>
-                    At Howell Hall we have access to the Copmanthorpe Community Garden which is maintained mostly by{" "}
-                    <strong>Sprouts</strong>, a group of local, green fingered, grow-your-own enthusiasts. We say
-                    &ldquo;mostly&rdquo; because the Panda children have a bed of their own to grow fruit and veg all
-                    year round, giving them the chance to learn about how food grows, whilst getting covered in mud
-                    (we&apos;re not sorry).
-                </p>
-                <h3 className="font-dk-crayon-crumble mt-12 mb-6 tracking-tight leading-none text-3xl lg:text-4xl">
                     Our website
                 </h3>
                 <p>
